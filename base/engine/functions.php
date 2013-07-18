@@ -30,8 +30,8 @@ function get_base_view_dir(){
 	return get_base_dir().'/views';
 }
 
-function get_base_function_dir(){
-	return get_base_dir().'/functions';
+function get_base_engine_dir(){
+	return get_base_dir().'/engine';
 }
 
 /* Basic site functions */
@@ -58,8 +58,8 @@ function get_site_view_dir(){
 	return get_site_dir().'/views';
 }
 
-function get_site_function_dir(){
-	return get_site_dir().'/functions';
+function get_site_engine_dir(){
+	return get_site_dir().'/engine';
 }
 
 
@@ -167,10 +167,10 @@ function get_script($script){
  * @return string
 */
 
-function get_function($function){
+function get_engine($function){
 
-	$file 			= get_site_function_dir().'/'.$function.'.php';
-	$second_file	= get_base_function_dir().'/'.$function.'.php';
+	$file 			= get_site_engine_dir().'/'.$function.'.php';
+	$second_file	= get_base_engine_dir().'/'.$function.'.php';
 	if(file_exists($file)){
 		return $file;
 	}
