@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <? wp_html() ?>>
+<html>
 <head>
 	<title><? bloginfo('name') ?></title>
 	<? wp_head() ?>
