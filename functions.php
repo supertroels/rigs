@@ -1,6 +1,6 @@
 <?
 
-/* !THIS SHOULD BE DYNAMIC IN TIME */
+/* !THIS SHOULD BE DYNAMIC! */
 error_reporting(E_WARNING | E_ERROR );
 ini_set('display_errors', 'On');
 
@@ -13,8 +13,7 @@ require(get_engine('rigs.class'));
 $rigs = new rigs();
 
 /*
-Call the main engine file.
-That file should require all other engine files.
+Call the main engine file which should require all other engine files.
 */
 if($file = get_engine('main')){
 	require($file);
