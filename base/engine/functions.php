@@ -58,6 +58,10 @@ function get_site_view_dir(){
 	return get_site_dir().'/views';
 }
 
+function get_site_snippet_dir(){
+	return get_site_dir().'/snippets';
+}
+
 function get_site_engine_dir(){
 	return get_site_dir().'/engine';
 }
@@ -83,6 +87,25 @@ function get_view($view){
 	}
 	elseif(file_exists($second_file)){
 		return $second_file;
+	}
+	return false;
+
+}
+
+
+/**
+ * Retreives the snippets dir if the file is present
+ *
+ * @author Troels Abrahamsen
+ * @param $snippet
+ * @return string
+*/
+
+function get_snippet($snippet){
+
+	$file 			= get_site_snippet_dir().'/'.$snippet.'.snippet.php';
+	if(file_exists($file)){
+		return $file;
 	}
 	return false;
 
