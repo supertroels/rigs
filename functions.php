@@ -1,9 +1,4 @@
 <?
-
-/* !THIS SHOULD BE DYNAMIC! */
-error_reporting(E_WARNING | E_ERROR );
-ini_set('display_errors', 'On');
-
 /*
 Include the main engine file, the rigs class file
 and then make a new rigs object called...you guessed it...$rigs!
@@ -19,5 +14,6 @@ if($file = get_engine('main')){
 	require($file);
 }
 unset($file);
+
 
 ?>

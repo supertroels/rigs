@@ -11,8 +11,8 @@ class rigs {
 	
 	function __construct(){
 		$this->view 	= false;
-		$this->head 	= 'head';
-		$this->foot 	= 'foot';
+		$this->header 	= 'header';
+		$this->footer 	= 'footer';
 		$this->worker 	= false;
 		$this->page 	= false;
 	}
@@ -34,7 +34,8 @@ class rigs {
 
 
 	/**
-	 * function description
+	 * This function interprets which view and worker to load
+	 * from the 'site' folder
 	 *
 	 * @author Troels Abrahamsen
 	 * @param $param
@@ -94,7 +95,7 @@ class rigs {
 				$this->worker = get_worker('index');
 			}
 			else{
-				die('You need an index file');
+				die('You need at least an index.view.php file!');
 			}
 		}
 
