@@ -1,4 +1,4 @@
 rigs
 ====
 
-Opiniated framework for wordpress theme development.
+Framework for wordpress theme development.
